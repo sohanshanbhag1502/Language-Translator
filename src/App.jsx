@@ -1,26 +1,7 @@
-import NavBar from './scripts/NavBar'
-import React from 'react'
-import FootBar from './scripts/FootBar'
-import Intro from './scripts/Intro.jsx'
 import { useState } from 'react'
-
-
-class PostIntro extends React.Component{
-    render(){
-        return(
-            <div id="mainbody">
-                <header>
-                    <NavBar />
-                </header>
-                <main>
-                </main>
-                <footer>
-                    <FootBar />
-                </footer>
-            </div>
-        )
-    }
-}
+import React from 'react'
+import Intro from './scripts/Intro.jsx'
+import PostIntro from './scripts/HomePage.jsx'
 
 function Home(){
     const [startIntro, setIntro]=useState(true);
