@@ -1,0 +1,38 @@
+#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+#innerabout{
+    background-color:rgba(0, 0, 0, 0.4);
+    width:100%;
+    padding:20px;
+    margin-left:-100%;
+    animation: 1.5s slide forwards;
+}
+
+@keyframes slide{
+    100% {margin-left: 0px;}
+}
+
+#bg{
+    z-index: -1;
+    background: url("writing.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200vh;
+    height: 100vh;
+    background-position: center;
+    position: absolute;
+    filter: blur(9px);
+}
+
+#aboutcontent{
+    margin-top:9%;
+}
+
+.links{
+    color: lightblue;
+}
