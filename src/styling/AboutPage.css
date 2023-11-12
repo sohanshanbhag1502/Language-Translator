@@ -19,7 +19,7 @@
 
 #bg{
     z-index: -1;
-    background: url("writing.jpeg");
+    background: url("../../public/writing.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 200vh;
