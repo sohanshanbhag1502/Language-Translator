@@ -1,0 +1,178 @@
+.mainform{
+    justify-content:center;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+}
+
+#background{
+    background-image: url('../../public/background.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    filter:blur(2.5px);
+    opacity:0.9;
+    position:fixed;
+    top:0px;
+    height:100%;
+    width:100%;
+    z-index: -1;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 20px;
+    margin-top:12vh;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: rgb(3, 3, 3, 0.7);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.inps::before,.inps::after{
+    box-sizing: border-box;
+}
+
+.inplabel{
+    display:flex;
+}
+
+.placeholder{
+    margin:15px;
+    top:calc(50%+15px);
+    margin-left:25px;
+    font-size:20px;
+    position: absolute;
+    color:white;
+    background-color:transparent;
+    cursor:text;
+}
+
+.inplabel .inps:valid+.placeholder,
+.inplabel .inps:focus+.placeholder{
+    transform:translateY(-120%);
+    transition-duration:0.5s;
+    font-size:15px;
+    margin-left:15px;
+    background-color: transparent;
+}
+
+.inps:valid,
+.inps:focus{
+    background-size: 100% 2px, 100% 2px, 100%;
+}
+
+.inps{
+    padding:10px;
+    margin:15px;
+    margin-top:10px;
+    border:none;
+    width:90%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    background-color: black;
+    background:
+        linear-gradient(90deg, #ccc, #ccc) center bottom/0 2px no-repeat,
+        linear-gradient(90deg, grey, grey) left bottom/100% 2px no-repeat,
+        linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0,0,0,0)) left bottom/100% no-repeat;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    transition: background-size 0.5s ease;
+}
+
+.inps:focus::placeholder{
+    color:transparent;
+}
+
+.inps::placeholder{
+    color: gray;
+    transition:color 0.3s ease;
+}
+
+.loginbuttons {
+    background-color: rgb(0, 167, 0);
+    color: wheat;
+    border: none;
+    padding-left:11%;
+    padding-right:11%;
+    padding-top:3%;
+    padding-bottom:3%;
+    border-radius: 5px;
+    margin: 0px 20px 0px 20px; 
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signbuttons {
+    background-color: rgb(0, 167, 0);
+    color: wheat;
+    border: none;
+    padding-left:15%;
+    padding-right:15%;
+    padding-top:3%;
+    padding-bottom:3%;
+    border-radius: 5px;
+    margin: 0px 20px 0px 20px; 
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.loginbuttons:hover,.signbuttons:hover {
+    background-color: rgb(0, 153, 0);
+}
+
+.loginbuttons:active,.signbuttons:active{
+    background-color: darkgreen;
+}
+
+
+.forgot-password {
+    text-align: left;
+    margin-top: 10px;
+    margin-left:20px;
+}
+
+#link{
+    text-decoration: none;
+    color: #007bff;
+}
+
+.mode-toggle {
+    cursor: pointer;
+    color: #007bff;
+    margin-top: 15px;
+}
+
+#buttonholder{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left:-5px;
+}
+
+@media screen and (max-width:720px) {
+    #logo{
+        transform: scale(0.8);
+        margin-right: -20px;
+    }
+    .form-container{
+        transform: scale(0.8);
+    }
+}
