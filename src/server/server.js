@@ -5,7 +5,7 @@ const usersModel=require('./models/users')
 const app=express()
 app.use(express.json())
 app.use(cors())
-mongoose.connect("mongodb://127.0.0.1:27017/users");
+mongoose.connect("mongodb+srv://sohan:3oNa23QDOR6NI62f@cluster0.l7eklrw.mongodb.net/users");
 
 app.post('/login',(req, res)=>{
     const {username, password}=req.body;
@@ -23,12 +23,6 @@ app.post('/login',(req, res)=>{
             res.json("No record existed")
         }
     })
-})
-
-app.post('/changepasswd', (req, res)=>{
-    usersModel.updateOne(req.body)
-    .then(users=>{res.json(users)})
-    .catch(err=>{res.json(err)})
 })
 
 app.post('/userdetails',(req,res)=>{
