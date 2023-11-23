@@ -1,0 +1,161 @@
+#translate{
+    display: flex;
+    flex-direction: column;
+}
+
+#translateinner{
+    display:flex;
+}
+
+.translateformbox{
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+    width:45vw;
+    margin-left:-110%;
+    animation: slidein 2.0s forwards;
+}
+
+.formcontents{
+    font-size: 2em;
+    margin: 10px;
+    margin-top: 0px;
+    border: 2px solid black;
+}
+
+.text{
+    height:600px;
+    resize: none;
+    border-radius:15px;
+}
+
+
+@keyframes slidein{
+    100%{margin-left: 10px;}
+}
+
+#translatewidgetscontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#butcontainer{
+    margin-top: 20%;
+    display: flex;
+    width: 100%;
+}
+
+.tbuttons{
+    font-size:30px;
+    padding: 10px;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin: 10px;
+}
+
+.tbuttons:hover{
+    background-color:rgb(24, 24, 175);
+}
+
+.tbuttons:active{
+    background-color:rgb(24, 24, 175);
+}
+
+#intbutton{
+    height:60px;
+    padding-bottom:5%;
+    margin-top: 15%;
+    font-size:40px;
+    align-items: center;
+    text-align: center;
+    width:100px;
+    color: black;
+}
+
+#intbutton:hover{
+    background-color:rgb(24, 24, 175);
+}
+
+#intbutton:active{
+    background-color:rgb(24, 24, 175);
+}
+
+@media screen and (max-width:720px) {
+    #translateinner{
+        display:flex;
+        flex-direction: column;
+        margin-left:-110%;
+        animation: slidein 2.0s forwards;
+    }
+    .translateformbox{
+        display: flex;
+        flex-direction: column;
+        margin:20px;
+        height:80vh;
+        width:85vw;
+        animation: none;
+    }
+    #intbutton{
+        height: 60px;
+        padding-top:0%;
+        margin-top: 0%;
+        margin-left:38%;
+        font-size:40px;
+        align-items: center;
+        text-align: center;
+        padding-bottom:70px;
+        width:100px;
+        transform:rotate(90deg);
+        z-index: -1;
+    }
+    @keyframes slidein{
+        100%{margin-left:10px;}
+    }
+    .first{
+        margin-top:11%;
+    }
+}
+
+@media screen and (min-width:720px) and (max-width:1112px) {
+    .translateformbox{
+        display: flex;
+        flex-direction: column;
+        margin:0%;
+        margin-top:0%;
+        width:95%;
+        margin-left:-110%;
+        animation: slidein 2.0s forwards;
+        margin-bottom: 10%;
+    }
+    #translateinner{
+        display:flex;
+        flex-direction: column;
+    }
+    .formcontents{
+        font-size: 2em;
+        width: 94%;
+        border: 2px solid black;
+    }
+    @keyframes slidein{
+        100%{margin-left:5%;}
+    }
+    @keyframes slideinbutton {
+        100%{margin-left:45%;}
+    }
+    #intbutton{
+        height: 60px;
+        padding-top:0%;
+        margin-top: 0%;
+        margin-left:45%;
+        font-size:40px;
+        align-items: center;
+        text-align: center;
+        padding-bottom:70px;
+        width:100px;
+        transform:rotate(90deg);
+        z-index: -1;
+    }
+    .first{
+        margin-top:10%;
+    }
+}

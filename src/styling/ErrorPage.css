@@ -1,0 +1,38 @@
+#errorhead{
+    font-family:Arial;
+    color: red;
+}
+
+#robotimg{
+    width: 28%;
+}
+
+#errortext{
+    font-family: Arial;
+    font-size: 25px;
+    color:red;
+}
+
+@media screen and (max-width:720px){
+    #logo img{
+        height:150px;
+    }
+    #robotimg{
+        width:100%;
+    }
+}
+
+@media screen and (min-width:720px) and (max-width:1112px) {
+    #logo img{
+        height:150px;
+    }
+    #robotimg{
+        width:85%;
+    }
+    #head{
+        font-size:4rem;
+    }
+    #moto{
+        font-size:2rem;
+    }
+}

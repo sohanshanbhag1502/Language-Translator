@@ -1,0 +1,56 @@
+#footelement{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#copyr{
+    color:white;
+    margin:10px;
+    font-size: 20px;
+}
+
+#Repobut{
+    display:flex;
+    align-items: center;
+    height: 80%;
+    width:16.7%;
+    justify-content: center;
+    margin-right:10px;
+}
+
+#repopara{
+    color: white;
+    margin-top: 10%;
+    margin-left: 1%;
+}
+
+@media screen and (max-width:720px) {
+    #copyr{
+        color:white;
+        margin:10px;
+        font-size:0.9em;
+        width:80%;
+    }
+    #Repobut{
+        display:flex;
+        align-items: center;
+        height:80%;
+        width:20%;
+    }
+    #repopara{
+        display: none;
+    }
+}
+
+@media screen and (min-width:720px) and (max-width:1112px) {
+    #Repobut{
+        display:flex;
+        align-items: center;
+        height: 80%;
+        width:26%;
+    }
+}
