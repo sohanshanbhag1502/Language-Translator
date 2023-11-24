@@ -120,7 +120,7 @@ function LoginBox(){
     axios.defaults.withCredentials = true;
     const login=(e)=>{
         e.preventDefault()
-        axios.post("https://language-translator-backend.vercel.app/login",{username, password})
+        axios.post("http://localhost:3001/login",{username, password})
         .then((result)=>{
             if (result.data==="Success"){
                 window.loggedin=true
