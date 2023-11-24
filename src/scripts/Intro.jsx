@@ -15,7 +15,7 @@ class Logo extends React.Component{
     render(){
         return (
             <div id="logodiv" style={{marginLeft:this.state.marginleft}} ref={this.ref}>
-                <img src="/public/favicon.png" ref={this.ref}></img>
+                <img src="./favicon.png" ref={this.ref}></img>
             </div>
         )
     }
