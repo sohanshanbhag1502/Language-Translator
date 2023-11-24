@@ -1,4 +1,3 @@
-require("dotenv").config()
 const express =require("express")
 const mongoose =require('mongoose')
 const cors =require("cors")
@@ -12,9 +11,7 @@ app.use(cors({
 }))
 app.use(express.json())
 
-console.log(process.env.MONGODB_URL)
-
-mongoose.connect(process.env.MONGODB_URL);
+mongoose.connect('mongodb+srv://sohan:3oNa23QDOR6NI62f@cluster0.l7eklrw.mongodb.net/');
 
 app.post('/', (req, res)=>{
     res.json("Hello")
