@@ -14,7 +14,7 @@ app.use(express.json())
 mongoose.connect('mongodb+srv://sohan:3oNa23QDOR6NI62f@cluster0.l7eklrw.mongodb.net/');
 
 app.post('/', (req, res)=>{
-    res.json("Hello")
+    res.json("Hello");
 })
 
 app.post('/login',(req, res)=>{
