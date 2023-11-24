@@ -12,6 +12,10 @@ app.use(cors({
 }))
 mongoose.connect(process.env.MONGODB_URI);
 
+app.post('/', (req, res)=>{
+    res.json("Hello")
+})
+
 app.post('/login',(req, res)=>{
     const {username, password}=req.body;
     usersModel.findOne({username:username})
