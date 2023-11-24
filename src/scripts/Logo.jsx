@@ -3,7 +3,7 @@ import "../styling/Logo.css"
 
 class LogoIcon extends React.Component{
     render(){
-        return <img src="../../public/favicon.png" id="icon"></img>
+        return <img src="/public/favicon.png" id="icon"></img>
     }
 }
 
