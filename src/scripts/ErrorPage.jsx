@@ -11,7 +11,7 @@ class ErrorPage extends React.Component{
                     <center><h1 id="errorhead">
                         ERROR 404!
                     </h1></center>
-                    <img src="/public/robot.jpg" id="robotimg"/>
+                    <img src="./robot.jpg" id="robotimg"/>
                     <p id="errortext">
                         Sorry the page you are looking for does not exist!
                     </p>
