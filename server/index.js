@@ -9,7 +9,7 @@ app.use(cors())
 
 mongoose.connect(process.env.MONGODB_URL);
 
-app.get('/', (req, res)=>{res.json(process.env.MONGODB_URL)})
+app.get('/', (req, res)=>{res.json("Server is running")})
 
 app.post('/login',(req, res)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
