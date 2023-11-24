@@ -9,14 +9,13 @@ app.use(cors())
 
 mongoose.connect(process.env.MONGODB_URL);
 
-app.get('/', (req, res)=>{res.json("Hello")})
+app.get('/', (req, res)=>{res.json(process.env.MONGODB_URL)})
 
 app.post('/login',(req, res)=>{
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Credentials", "false");
     res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
     res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-    console.log(process.env.MONGODB_URL)
     const {username, password}=req.body;
     usersModel.findOne({username:username})
     .then((user)=>{
