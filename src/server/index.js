@@ -5,7 +5,7 @@ const usersModel=require('./models/users')
 
 const app=express()
 app.use(cors({
-    origin:['https://language-translator-tan.vercel.app'],
+    origin:['https://language-translator-tan.vercel.app/'],
     methods:['POST', 'GET'],
     credentials:true
 }))
