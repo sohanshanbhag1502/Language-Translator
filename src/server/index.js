@@ -5,7 +5,7 @@ const usersModel=require('./models/users')
 
 const app=express()
 app.use(cors({
-    origin:['https://language-translator-backend.vercel.app'],
+    origin:['https://language-translator.vercel.app'],
     methods:['POST', 'GET'],
     credentials:true
 }))
@@ -41,4 +41,6 @@ app.post('/userdetails',(req,res)=>{
     .catch(err=>res.json(err))
 })
 
-module.exports=app
+app.listen(3001, ()=>{
+    console.log("Server is running")
+})
