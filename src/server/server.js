@@ -5,7 +5,11 @@ const cors =require("cors")
 const usersModel=require('./models/users')
 const app=express()
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin:['https://language-translator-backend.vercel.app/'],
+    methods:['POST', 'GET'],
+    credentials:true
+}))
 mongoose.connect(process.env.MONGODB_URI);
 
 app.post('/login',(req, res)=>{
