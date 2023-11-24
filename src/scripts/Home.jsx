@@ -24,11 +24,11 @@ export class FeatureList extends React.Component{
         return(
             <div>
                 <center><h1 id="first">Our Features</h1></center>
-                <Feature img="../../public/faster.png" feature="Faster" desc="Convert the languages on the go."/>
-                <Feature img="../../public/smooth.png" feature="Smoother" desc="Experience smooth animations
+                <Feature img="/public/faster.png" feature="Faster" desc="Convert the languages on the go."/>
+                <Feature img="/public/smooth.png" feature="Smoother" desc="Experience smooth animations
 while navigating through the website."/>
-                <Feature img="../../public/portable.png" feature="Portable" desc="Convert the languages regardless of device you are using."/>
-                <Feature img="../../public/privacy.png" feature="Privacy" desc="Give minmal details to create account."/>
+                <Feature img="/public/portable.png" feature="Portable" desc="Convert the languages regardless of device you are using."/>
+                <Feature img="/public/privacy.png" feature="Privacy" desc="Give minmal details to create account."/>
             </div>
         )
     }
