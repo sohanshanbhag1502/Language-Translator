@@ -9,7 +9,7 @@ app.use(cors())
 
 mongoose.connect(process.env.MONGODB_URL);
 
-app.get('/', (res, req)=>{res.json("Hello")})
+app.get('/', (req, res)=>{res.json("Hello")})
 
 app.post('/login',(req, res)=>{
     const {username, password}=req.body;
