@@ -3,9 +3,12 @@ const mongoose =require('mongoose')
 const cors =require("cors")
 const usersModel=require('./models/users')
 const app=express()
+
 app.use(express.json())
-app.use(cors())
-mongoose.connect("mongodb://127.0.0.1:27017/users");
+app.use(cors({
+    origin:""
+}))
+mongoose.connect(process.env.MONGODB_URL);
 
 app.post('/login',(req, res)=>{
     const {username, password}=req.body;
@@ -31,6 +34,6 @@ app.post('/userdetails',(req,res)=>{
     .catch(err=>res.json(err))
 })
 
-app.listen(3001,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("server is running")
 })
