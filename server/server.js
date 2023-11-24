@@ -8,7 +8,10 @@ app.use(express.json())
 app.use(cors({
     origin:""
 }))
+
 mongoose.connect(process.env.MONGODB_URL);
+
+app.get('/', (res, req)=>{res.json("Hello"))
 
 app.post('/login',(req, res)=>{
     const {username, password}=req.body;
