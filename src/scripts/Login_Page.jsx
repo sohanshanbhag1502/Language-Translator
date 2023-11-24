@@ -12,7 +12,7 @@ function SignUpForm(){
     const [cpassword, setCPassword]=useState()
     const [email, setEmail]=useState()
     const [name, setName]=useState()
-
+    axios.defaults.withCredentials = true;
     const handlesubmit=(e)=>{
         if (cpassword==password){
             e.preventDefault()
@@ -117,6 +117,7 @@ function LoginBox(){
     const [username, setUsername]=useState()
     const [password, setPassword]=useState()
     const navigate=useNavigate()
+    axios.defaults.withCredentials = true;
     const login=(e)=>{
         e.preventDefault()
         axios.post("https://language-translator-backend.vercel.app/login",{username, password})
