@@ -12,6 +12,10 @@ mongoose.connect(process.env.MONGODB_URL);
 app.get('/', (req, res)=>{res.json("Hello")})
 
 app.post('/login',(req, res)=>{
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "false");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
     const {username, password}=req.body;
     usersModel.findOne({username:username})
     .then((user)=>{
@@ -30,6 +34,10 @@ app.post('/login',(req, res)=>{
 })
 
 app.post('/userdetails',(req,res)=>{
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "false");
+    res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
     usersModel.create(req.body)
     .then(users=>res.json(users))
     .catch(err=>res.json(err))
