@@ -6,8 +6,11 @@
             "use": "@vercel/python"
         }
     ],
+    "routes": [
+        { "source": "/(.*)", "destination": "/" }
+    ],
     "rewrites": [
-        { "source": "/(.*)", "destination": "./index.js" }
+        { "source": "/(.*)", "destination": "/" }
     ],
     "headers": [
         {
