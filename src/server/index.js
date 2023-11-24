@@ -33,6 +33,7 @@ app.post('/login',(req, res)=>{
             res.json("No record existed")
         }
     })
+    .catch(err=>res.json(err))
 })
 
 app.post('/userdetails',(req,res)=>{
