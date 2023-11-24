@@ -16,7 +16,7 @@ function SignUpForm(){
     const handlesubmit=(e)=>{
         if (cpassword==password){
             e.preventDefault()
-            axios.post("https://language-translator-backend.vercel.app//userdetails",{name, email, password, username})
+            axios.post("https://language-translator-backend.vercel.app/userdetails",{name, email, password, username})
             .then((result)=>{
                 navigate('/login');
                 alert("User account created successfully");
@@ -119,7 +119,7 @@ function LoginBox(){
     const navigate=useNavigate()
     const login=(e)=>{
         e.preventDefault()
-        axios.post("https://language-translator-backend.vercel.app//login",{username, password})
+        axios.post("https://language-translator-backend.vercel.app/login",{username, password})
         .then((result)=>{
             if (result.data==="Success"){
                 window.loggedin=true
