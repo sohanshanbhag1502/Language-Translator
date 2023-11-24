@@ -40,3 +40,7 @@ app.post('/userdetails',(req,res)=>{
     .then(users=>res.json(users))
     .catch(err=>res.json(err))
 })
+
+app.listen(3001, ()=>{
+    console.log("Server is running")
+})
