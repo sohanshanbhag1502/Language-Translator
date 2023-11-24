@@ -5,13 +5,13 @@ const usersModel=require('./models/users')
 
 const app=express()
 app.use(cors({
-    origin:['https://language-translator.vercel.app'],
+    origin:['https://language-translator-tan.vercel.app'],
     methods:['POST', 'GET'],
     credentials:true
 }))
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://sohan:3oNa23QDOR6NI62f@cluster0.l7eklrw.mongodb.net/');
+mongoose.connect(process.env.MONGODB_URL);
 
 app.get('/', (req, res)=>{
     res.json("Hello");
