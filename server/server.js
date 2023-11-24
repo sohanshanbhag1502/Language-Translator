@@ -5,9 +5,7 @@ const usersModel=require('./models/users')
 const app=express()
 
 app.use(express.json())
-app.use(cors({
-    origin:""
-}))
+app.use(cors())
 
 mongoose.connect(process.env.MONGODB_URL);
 
