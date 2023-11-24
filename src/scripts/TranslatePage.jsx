@@ -4,7 +4,7 @@ import FootBar from "./FootBar.jsx"
 import "../styling/TranslatePage.css"
 import {BsFillClipboardFill} from 'react-icons/bs'
 import {GiHorizontalFlip} from 'react-icons/gi'
-import {translate, languages} from '../server/translate.js'
+import {translate, languages} from '../translateapi/translate.js'
 
 class TranslateBox extends React.Component{
     constructor(){
