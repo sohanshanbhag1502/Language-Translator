@@ -6,6 +6,8 @@ const app=express()
 
 app.use(express.json())
 app.use(cors({origin: true, credentials: true}))
+app.options('/login', cors())
+app.options('/userdetails', cors())
 
 mongoose.connect(process.env.MONGODB_URL);
 
