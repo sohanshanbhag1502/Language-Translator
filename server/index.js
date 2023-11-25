@@ -9,7 +9,7 @@ app.use(cors({origin: true, credentials: true}))
 app.options('/login', cors())
 app.options('/userdetails', cors())
 
-mongoose.connect(process.env.MONGODB_URL);
+mongoose.connect(process.env.MONGODB_URI);
 
 app.get('/', (req, res)=>{res.json("Server is running")})
 
