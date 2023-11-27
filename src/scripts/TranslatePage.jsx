@@ -25,7 +25,6 @@ class TranslateBox extends React.Component{
         )
     }
     componentDidMount(){
-        document.getElementById("copy1").remove()
         let cp2=document.getElementById("copy2")
         let intbu=document.getElementById("intbutton")
         intbu.onclick=(e)=>{
