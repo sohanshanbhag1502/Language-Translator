@@ -25,7 +25,7 @@ class TranslateBox extends React.Component{
         )
     }
     componentDidMount(){
-        let cp1=document.getElementById("copy1")
+        document.getElementById("copy1").remove()
         let cp2=document.getElementById("copy2")
         let intbu=document.getElementById("intbutton")
         intbu.onclick=(e)=>{
@@ -73,13 +73,6 @@ ${languages[lang_code]}</option>`;
                 })}
             }
         document.getElementById('secondtext').value=this.state.text;
-        cp1.onclick=(e)=>{
-            e.preventDefault()
-            let text1=document.getElementById('firsttext')
-            text1.focus()
-            navigator.clipboard.readText().then((clipText) => (text1.val = clipText))
-        }
-        cp1.remove()
         cp2.onclick=(e)=>{
             e.preventDefault()
             document.getElementById('secondtext').select()
