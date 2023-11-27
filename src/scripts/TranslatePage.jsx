@@ -79,6 +79,7 @@ ${languages[lang_code]}</option>`;
             text1.focus()
             navigator.clipboard.readText().then((clipText) => (text1.val = clipText))
         }
+        cp1.remove()
         cp2.onclick=(e)=>{
             e.preventDefault()
             document.getElementById('secondtext').select()
