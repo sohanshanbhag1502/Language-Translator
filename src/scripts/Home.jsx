@@ -28,7 +28,7 @@ export class FeatureList extends React.Component{
                 <Feature img="./smooth.png" feature="Smoother" desc="Experience smooth animations
 while navigating through the website."/>
                 <Feature img="./portable.png" feature="Portable" desc="Convert the languages regardless of device you are using."/>
-                <Feature img="./privacy.png" feature="Privacy" desc="Give minmal details to create account."/>
+                <Feature img="./privacy.png" feature="Privacy" desc="Give minimal personal details to create account."/>
             </div>
         )
     }
