@@ -15,7 +15,7 @@ class TranslateBox extends React.Component{
         return(
             <div className={"translateformbox"+" "+this.props.class}>
                 <div id="butcontainer">
-                    copyid?<button id={this.props.copyid} className="tbuttons"><BsFillClipboardFill /></button>:<></>
+                    <button id={this.props.copyid} className="tbuttons"><BsFillClipboardFill /></button>:<></>
                     {this.props.givetran?<button id="tranbut" className="tbuttons">Translate</button>:<></>}
                 </div>
                 <select id={this.props.id1} className="formcontents optionssel"></select>
