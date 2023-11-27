@@ -15,7 +15,7 @@ class TranslateBox extends React.Component{
         return(
             <div className={"translateformbox"+" "+this.props.class}>
                 <div id="butcontainer">
-                    <button id={this.props.copyid} className="tbuttons"><BsFillClipboardFill /></button>
+                    copyid?<button id={this.props.copyid} className="tbuttons"><BsFillClipboardFill /></button>:<></>
                     {this.props.givetran?<button id="tranbut" className="tbuttons">Translate</button>:<></>}
                 </div>
                 <select id={this.props.id1} className="formcontents optionssel"></select>
@@ -87,7 +87,7 @@ class TranslateMain extends React.Component{
             <div id="translatewidgetscontainer">
                 <form id="translateinner">
                     <div id="backgroundhome"></div>
-                    <TranslateBox copyid=null readonly={false} id1="firstsel" id2="firsttext" class="first" givetran={true} holder={"From Text..."}/>
+                    <TranslateBox copyid={null} readonly={false} id1="firstsel" id2="firsttext" class="first" givetran={true} holder={"From Text..."}/>
                     <button id="intbutton"><GiHorizontalFlip /></button>
                     <TranslateBox copyid="copy2" readonly={true} id1="secondsel" id2="secondtext" class="\b" givetran={false} holder={"To Text..."}/>
                 </form>
