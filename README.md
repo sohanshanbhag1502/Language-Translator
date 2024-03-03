@@ -1,6 +1,6 @@
 # Language Translator
 
-This a website which converts natural languages.
+This a website which converts natural languages. Built with Reactjs, Nodejs and MongoDB.
 
 Authors:
 
